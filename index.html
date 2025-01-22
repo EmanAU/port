@@ -5,24 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <style>
-        
-        body{
+        body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             padding: 0;
             margin: 0;
             overflow: scroll;
             scroll-behavior: smooth;
         }
-        
-
-        .header{
+    
+        .header {
             position: relative;
             background-color: beige;
             height: 80px;
             width: 100%;
         }
-
-        .btns{
+    
+        .btns {
             position: relative;
             height: 30px;
             width: 65px;
@@ -32,9 +30,8 @@
             align-items: center;
             text-align: center;
             padding: 2px;
-
         }
-
+    
         .btns:hover {
             transform: scale(1.1);
             transition: 350ms;
@@ -43,15 +40,13 @@
             cursor: pointer;
             font-weight: 100px;
         }
-
+    
         .btns a:hover {
-
             transform: scale(1.1);
             transform: translate(350ms);
-
         }
-
-        .flex{
+    
+        .flex {
             display: flex;
             flex-direction: row;
             position: absolute;
@@ -59,90 +54,167 @@
             right: 0;
             margin-right: 1%;
             margin-top: 1%;
-
         }
-
+    
         .flex a {
             text-decoration: none;
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             color: rgb(234, 250, 250);
-
         }
-
-
-        .slogan{
-
+    
+        .slogan {
             font-size: 20px;
             justify-content: center;
             position: absolute;
             left: 50%;
-            transform: translateX(-50%);            
-
+            transform: translateX(-50%);
         }
-
+    
         .header img {
             padding: 10px;
             margin-left: 10px;
             position: absolute;
             height: 50px;
             margin-top: 3px;
-            
         }
-
-        .header a :hover {
+    
+        .header a:hover {
             transform: scale(1.1);
             transition: 350ms;
         }
-
-
-
-        .img-pos{
-            position: absolute;
-            margin-top: 8%;
-            margin-left: 5%;
+    
+        .img-pos {
+            display: flex; /* Enables flexbox */
+            justify-content: center; /* Centers horizontally */
+            align-items: center; /* Centers vertically */
+            margin-top: 8%; /* Adjust as needed */
         }
-        
+    
         .image img {
-            height: 350px;
-            border-radius: 100%;
+            height: 350px; /* Adjust the size as needed */
+            border-radius: 100%; /* Circular image */
+            object-fit: cover; /* Ensures the image fits well */
         }
-
-
-
-
-
-
+    
+        .aboutBox {
+            margin-left: 50%;
+            transform: translateX(-50%);
+            margin-top: 8%;
+            position: relative;
+            width: 90%;
+            height: 650px;
+            background-color: black;
+            border-radius: 25px;
+            box-shadow: 10px 10px 10px 10px black;
+        }
+    
+        .aboutText h1 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: white;
+            font-size: 66px;
+            margin-left: 60%;
+            transform: translateX(-50%);
+            position: absolute;
+        }
+    
+        .aboutTextBox {
+            position: absolute;
+            width: 65%;
+            height: 75%;
+            right: 2%;
+            top: 23%;
+        }
+    
+        .aboutMainText {
+            text-align: justify;
+            padding: 15px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 600;
+            color: white;
+        }
+    
         @media only screen and (max-width: 600px) {
+            body {
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                overflow-x: hidden;
+            }
+    
+            .header {
+                margin: 0;
+                padding: 0;
+                width: 100vw; /* Uses viewport width */
+                box-sizing: border-box; /* Includes padding in width calculation */
+            }
+    
             .btns {
                 margin-top: 0px;
                 color: rgb(206, 89, 89);
                 border-radius: 5px 0px 0px 5px;
-              }
-
-
-            .flex{
-                margin-top: 20%;
+            }
+    
+            .flex {
+                margin-top: 29%;
                 flex-direction: column;
                 gap: 20px;
                 margin-right: 0px;
                 position: fixed;
-                
+                overflow: hidden;
             }
-
+    
             .slogan {
-                font-size: 13px;
+                font-size: 10px;
             }
-
+    
             .header img {
                 height: 30px;
             }
+    
+            .aboutBox {
+                height: 1000px;
+                position: relative;
+            }
+    
+            .aboutTextBox {
+                margin-top: 46%;
+                width: 90%;
+                overflow: scroll;
+            }
+    
+            .aboutText {
+    width: auto; /* Allow flexible width */
+    text-align: center;
+}
 
+    
+            .aboutText h1 {
+                margin-top: 88%;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                color: white;
+                font-size: 50px; /* Adjust size if necessary */
+                margin-left: 50%;
+                transform: translateX(-50%);
+                position: absolute;
+                white-space: nowrap; /* Prevents text wrapping */
+}
 
+    
+            .image img {
+                margin-top: 10%;
+                height: 220px; /* Adjust image size as needed */
+                border-radius: 100%; /* Circular image */
+                position: relative; /* Removes the absolute positioning */
+            }
+    
+            .aboutBox {
+                position: relative;
+                transform: translateX(-52%);
+                margin-left: 50%;
+            }
         }
-
-
-
     </style>
+    
 
 
     <title>Portfolio</title>
@@ -168,16 +240,41 @@
         </div>
     </div>
 
+
+
+    <div class="aboutBox">
+
+        <div class="aboutText"><h1>About Me</h1></div>
+        <div class="aboutTextBox">
+
+            <div class="distance">
+            <p class="aboutMainText">Hello! My name is Eman, and I am a first-semester BS IT student at Air University, Islamabad. Passionate about technology and programming, I have been learning C++ for a while and enjoy building my skills in object-oriented programming and problem-solving. Recently, I’ve started exploring C# and look forward to leveraging it for creating applications in areas like desktop software, games, and potentially Android development.
+
+                Apart from programming, I’m an analytical thinker who enjoys solving Rubik's Cubes and continuously improving my logic-building abilities. Although I’m not a fan of advanced mathematics, I am determined to excel in the tech field by focusing on practical skills and continuous learning.
+                
+                As a university student living in a hostel, I value time management and balance between academics and personal growth. I aspire to make meaningful contributions to the tech industry, one project at a time. 😊</p>
+            </div>
+            <div>
+                <p class="aboutMainText"> 
+                    Beyond academics, I am an analytical thinker who enjoys solving Rubik's Cubes and tackling logical puzzles to keep my mind sharp. While advanced mathematics isn’t my favorite, I’ve learned to approach challenges with determination and focus on building a strong foundation in the skills that matter most in the tech industry.
+
+                    Living in a hostel has taught me the importance of independence, time management, and self-discipline. I value balancing my academic responsibilities with personal growth and take pride in setting clear goals for my future. In the coming years, I aspire to dive deeper into fields like operating systems, utility software, and perhaps even game development, as I work toward carving my niche in the tech world.  
+                </p>
+            </div>
+        </div>
+
 <div class="img-pos">
 
 <div class="image">
 
+    
     <img src="drew-hays-agGIKYs4mYs-unsplash.jpg" alt="Portfolio picture">
-
+    
 </div>
 
-</div>
 
+</div>
+</div>
 
    
 </body>
