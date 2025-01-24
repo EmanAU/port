@@ -4,231 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <style>
-        body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            padding: 0;
-            margin: 0;
-            overflow: scroll;
-            scroll-behavior: smooth;
-        }
-    
-        .header {
-            position: relative;
-            background-color: beige;
-            height: 80px;
-            width: 100%;
-        }
-    
-        .btns {
-            position: relative;
-            height: 30px;
-            width: 65px;
-            background-color: rgb(206, 89, 89);
-            border-radius: 5px;
-            align-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 2px;
-        }
-    
-        .btns:hover {
-            transform: scale(1.1);
-            transition: 350ms;
-            background-color: rgb(255, 0, 0);
-            color: red;
-            cursor: pointer;
-            font-weight: 100px;
-        }
-    
-        .btns a:hover {
-            transform: scale(1.1);
-            transform: translate(350ms);
-        }
-    
-        .flex {
-            display: flex;
-            flex-direction: row;
-            position: absolute;
-            gap: 20px;
-            right: 0;
-            margin-right: 1%;
-            margin-top: 1%;
-        }
-    
-        .flex a {
-            text-decoration: none;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            color: rgb(234, 250, 250);
-        }
-    
-        .slogan {
-            font-size: 20px;
-            justify-content: center;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    
-        .header img {
-            padding: 10px;
-            margin-left: 10px;
-            position: absolute;
-            height: 50px;
-            margin-top: 3px;
-        }
-    
-        .header a:hover {
-            transform: scale(1.1);
-            transition: 350ms;
-        }
-    
-        .img-pos {
-            display: flex; /* Enables flexbox */
-            justify-content: center; /* Centers horizontally */
-            align-items: center; /* Centers vertically */
-            margin-top: 8%; /* Adjust as needed */
-            position: absolute;
-            left: 0;
-            margin-left: 5%;
-            margin-top: 12%;
-        }
-    
-        .image img {
-            height: 350px; /* Adjust the size as needed */
-            border-radius: 100%; /* Circular image */
-        }
-    
-        .aboutBox {
-            margin-left: 50%;
-            transform: translateX(-50%);
-            margin-top: 8%;
-            position: relative;
-            width: 90%;
-            height: 650px;
-            background-color: black;
-            border-radius: 25px;
-            box-shadow: 10px 10px 10px 10px black;
-        }
-    
-        .aboutText h1 {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            color: white;
-            font-size: 66px;
-            margin-left: 60%;
-            transform: translateX(-50%);
-            position: absolute;
-        }
-    
-        .aboutTextBox {
-            position: absolute;
-            width: 65%;
-            height: 75%;
-            right: 2%;
-            top: 23%;
-        }
-    
-        .aboutMainText {
-            text-align: justify;
-            padding: 15px;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            font-weight: 600;
-            color: white;
-        }
-    
-        @media only screen and (max-width: 600px) {
-            body {
-                padding: 0;
-                margin: 0;
-                width: 100%;
-                overflow-x: hidden;
-            }
-    
-            .header {
-                position: fixed;
-                top: 0;
-                left: 0;
-                margin: 0;
-                padding: 0;
-                height: 110px;
-                width: 100vw; /* Uses viewport width */
-                box-sizing: border-box; 
-                z-index: 10;
-            }
-    
-            .btns {
-                margin-top: 0px;
-                color: rgb(206, 89, 89);
-                border-radius: 5px;
-            }
-    
-            .flex {
-                
-                position: fixed;
-                left: 0;
-                margin-top: 17%;
-                flex-direction: row;
-                gap: 165x;
-                margin-right: 0px;
-                position: absolute;
-                justify-content: center;
-                align-items: center;
-            }
-    
-            .slogan {
-                font-size: 10px;
-            }
-    
-            .header img {
-                height: 30px;
-            }
-    
-            .aboutBox {
-                margin-top: 40%;
-                height: 1000px;
-                position: relative;
-            }
-    
-            .aboutTextBox {
-                margin-top: 46%;
-                width: 90%;
-                overflow: scroll;
-            }
-    
-            .aboutText {
-    width: auto; /* Allow flexible width */
-    text-align: center;
-}
-
-    
-            .aboutText h1 {
-                margin-top: 88%;
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                color: white;
-                font-size: 50px; /* Adjust size if necessary */
-                
-              
-                position: absolute;
-                white-space: nowrap; /* Prevents text wrapping */
-}
-
-    
-            .image img {
-                margin-left: 50%;
-                transform: translateX(-40%);
-                margin-top: 10%;
-                height: 220px; /* Adjust image size as needed */
-                border-radius: 100%; /* Circular image */
-                position: relative; /* Removes the absolute positioning */
-            }
-    
-            .aboutBox {
-                position: relative;
-                transform: translateX(-52%);
-                margin-left: 50%;
-            }
-        }
-    </style>
+   <link rel="stylesheet" href="style.css">
     
 
 
@@ -290,6 +66,82 @@
 
 </div>
 </div>
+
+
+
+<div class="serviceBox">
+
+<div class="servicesText">Services</div>
+
+
+<div class="move">
+
+<ol class="services">
+    <li>
+        <div class="showService makeHover"><div><h1>HTML</h1></div><div><button style="cursor: pointer;">Check</button></div></div>
+    </li>
+    <li>
+        <div class="showService makeHover"><div><h1>CSS</h1></div><div><button style="cursor: pointer;">Check</button></div></div>
+    </li>
+    <li>
+        <div class="showService makeHover"><div><h1>Java Script</h1></div><div><button style="cursor: pointer;">Check</button></div></div>
+    </li>
+</ol>
+
+
+</div>
+<div class="move2">
+
+    <ol class="services">
+        <li>
+            <div class="showService makeHover"><div><h1>React</h1></div><div><button style="cursor: pointer;">Check</button></div></div>
+        </li>
+        <li>
+            <div class="showService makeHover"><div><h1>Angular</h1></div><div><button style="cursor: pointer;">Check</button></div></div>
+        </li>
+        <li>
+            <div class="showService makeHover"><div><h1>Node Js</h1></div><div><button style="cursor: pointer;">Check</button></div></div>
+        </li>
+    </ol>
+    
+    
+    </div>
+</div>
+
+
+
+<div class="contactUs">
+
+    <div class="contactText"><h1>Contact Us</h1></div>
+
+    <form action="">
+
+    <div class="number1">
+<label for="message"><h1>Enter Email</h1></label> <br>
+<input type="text" required id="message">
+</div>
+
+
+<div class="number2">
+<label for="email"><h1>Enter Message</h1></label> <br>
+<form>
+    <textarea id="email" style="resize: none; padding: 0; box-sizing: border-box;"></textarea>
+  </form>
+  
+</div>
+
+
+
+</form>
+
+
+<div class="divSend">
+    <h1><a href="#">Send</a></h1>
+</div>
+
+
+</div>
+
 
    
 </body>
